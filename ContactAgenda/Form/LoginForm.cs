@@ -18,10 +18,6 @@ namespace ContactAgenda
             InitializeComponent();
 
             string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
-
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            _userService = new UserService(connection);
         }
 
         #region Events
@@ -52,12 +48,10 @@ namespace ContactAgenda
             string username = TxtBxUsername.Text;
             string password = TxtBxPassword.Text;
 
-            User user = _userService.GetLogin(username, password);
 
-            if((user.Username == username && user.Password == password ) || true)
+            if(username == "nihad" && password == "12345678")
             {
-                
-                //LoginRepository.Instance.IdLogedUser = user.Id;
+
 
                 ContactsForm newContactsForm = new ContactsForm();
                 newContactsForm.Show();
@@ -65,6 +59,7 @@ namespace ContactAgenda
 
                 TxtBxUsername.Clear();
                 TxtBxPassword.Clear();
+
             }
             else if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {

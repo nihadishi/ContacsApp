@@ -3,16 +3,9 @@ namespace ContactAgenda
 {
     partial class AddContactForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+       protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -23,10 +16,6 @@ namespace ContactAgenda
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.TlpMain = new System.Windows.Forms.TableLayoutPanel();
@@ -44,8 +33,6 @@ namespace ContactAgenda
             this.TxtBxWorkNumber = new System.Windows.Forms.MaskedTextBox();
             this.TlpMain.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TlpMain
             // 
             this.TlpMain.ColumnCount = 4;
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -78,9 +65,7 @@ namespace ContactAgenda
             this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.TlpMain.Size = new System.Drawing.Size(609, 450);
             this.TlpMain.TabIndex = 0;
-            // 
-            // LblName
-            // 
+          
             this.LblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblName.AutoSize = true;
             this.LblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -89,9 +74,7 @@ namespace ContactAgenda
             this.LblName.Size = new System.Drawing.Size(53, 21);
             this.LblName.TabIndex = 0;
             this.LblName.Text = "Name";
-            // 
-            // LblLastName
-            // 
+          
             this.LblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLastName.AutoSize = true;
             this.LblLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -100,8 +83,6 @@ namespace ContactAgenda
             this.LblLastName.Size = new System.Drawing.Size(83, 21);
             this.LblLastName.TabIndex = 1;
             this.LblLastName.Text = "Last name";
-            // 
-            // LblAddress
             // 
             this.LblAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblAddress.AutoSize = true;
@@ -112,8 +93,6 @@ namespace ContactAgenda
             this.LblAddress.TabIndex = 2;
             this.LblAddress.Text = "Address";
             // 
-            // LblPhoneNumber
-            // 
             this.LblPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblPhoneNumber.AutoSize = true;
             this.LblPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -123,8 +102,6 @@ namespace ContactAgenda
             this.LblPhoneNumber.TabIndex = 3;
             this.LblPhoneNumber.Text = "Phone number";
             // 
-            // LblWorkNumber
-            // 
             this.LblWorkNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblWorkNumber.AutoSize = true;
             this.LblWorkNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -133,8 +110,6 @@ namespace ContactAgenda
             this.LblWorkNumber.Size = new System.Drawing.Size(110, 21);
             this.LblWorkNumber.TabIndex = 4;
             this.LblWorkNumber.Text = "Work number";
-            // 
-            // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
             this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
@@ -147,8 +122,6 @@ namespace ContactAgenda
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // BtnCancel
-            // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -160,16 +133,12 @@ namespace ContactAgenda
             this.BtnCancel.UseVisualStyleBackColor = false;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // TxtBxName
-            // 
             this.TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxName.Location = new System.Drawing.Point(307, 59);
             this.TxtBxName.Name = "TxtBxName";
             this.TxtBxName.Size = new System.Drawing.Size(207, 29);
             this.TxtBxName.TabIndex = 7;
-            // 
-            // TxtBxLastName
             // 
             this.TxtBxLastName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -178,16 +147,12 @@ namespace ContactAgenda
             this.TxtBxLastName.Size = new System.Drawing.Size(207, 29);
             this.TxtBxLastName.TabIndex = 8;
             // 
-            // TxtBxAddress
-            // 
             this.TxtBxAddress.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxAddress.Location = new System.Drawing.Point(307, 171);
             this.TxtBxAddress.Name = "TxtBxAddress";
             this.TxtBxAddress.Size = new System.Drawing.Size(207, 29);
             this.TxtBxAddress.TabIndex = 9;
-            // 
-            // TxtBxPhoneNumber
             // 
             this.TxtBxPhoneNumber.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -197,8 +162,6 @@ namespace ContactAgenda
             this.TxtBxPhoneNumber.Size = new System.Drawing.Size(207, 29);
             this.TxtBxPhoneNumber.TabIndex = 10;
             // 
-            // TxtBxWorkNumber
-            // 
             this.TxtBxWorkNumber.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxWorkNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxWorkNumber.Location = new System.Drawing.Point(307, 283);
@@ -206,8 +169,6 @@ namespace ContactAgenda
             this.TxtBxWorkNumber.Name = "TxtBxWorkNumber";
             this.TxtBxWorkNumber.Size = new System.Drawing.Size(207, 29);
             this.TxtBxWorkNumber.TabIndex = 11;
-            // 
-            // AddContactForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
