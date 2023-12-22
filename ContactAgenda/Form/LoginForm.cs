@@ -1,8 +1,5 @@
-﻿using BusinessLayer.Service;
-using Database.Model;
-using System;
+﻿using System;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace ContactAgenda
@@ -11,7 +8,7 @@ namespace ContactAgenda
     {
         public static LoginForm Instance { get; } = new LoginForm();
 
-        private UserService _userService;
+        //private UserService _userService;
 
         public LoginForm()
         {

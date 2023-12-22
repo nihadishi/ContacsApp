@@ -1,5 +1,5 @@
-﻿using BusinessLayer.Service;
-using Database.Model;
+﻿//using BusinessLayer.Service;
+//using Database.Model;
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -9,17 +9,17 @@ namespace ContactAgenda
 {
     public partial class AddContactForm : Form
     {
-        private ContactService _contactService;
+        //private ContactService _contactService;
 
         public AddContactForm()
         {
             InitializeComponent();
 
-            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            //string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            //SqlConnection connection = new SqlConnection(connectionString);
 
-            _contactService = new ContactService(connection);
+           // _contactService = new ContactService(connection);
         }
 
         // Disable window close button.
@@ -47,14 +47,7 @@ namespace ContactAgenda
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (LoginRepository.Instance.IdSelectedContact != null)
-            {
-                EditContact();
-            }
-            else
-            {
                 AddContact();
-            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -73,7 +66,7 @@ namespace ContactAgenda
             string address = TxtBxAddress.Text;
             string phoneNumber = TxtBxPhoneNumber.Text;
             string workNumber = TxtBxWorkNumber.Text;
-            int idUser = (int)LoginRepository.Instance.IdLogedUser;
+            int idUser = 1;
 
             if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(address) || !TxtBxPhoneNumber.MaskCompleted || !TxtBxWorkNumber.MaskCompleted)
             {
@@ -81,19 +74,7 @@ namespace ContactAgenda
             }
             else
             {
-                Contact newContact = new Contact()
-                {
-                    Name = name,
-                    LastName = lastName,
-                    Address = address,
-                    PhoneNumber = phoneNumber,
-                    WorkNumber = workNumber,
-                    IdUser = idUser
-                };
-
-                bool result = _contactService.Add(newContact);
-
-                if (result)
+                if (true)
                 {
                     DialogResult response = MessageBox.Show("Contact created successfully.", "Notification!", MessageBoxButtons.OK);
 
@@ -110,17 +91,7 @@ namespace ContactAgenda
         }
 
         private void LoadContactToEdit()
-        {
-            if(LoginRepository.Instance.IdSelectedContact != null)
-            {
-                Contact contact = _contactService.GetById((int)LoginRepository.Instance.IdSelectedContact);
-
-                TxtBxName.Text = contact.Name;
-                TxtBxLastName.Text = contact.LastName;
-                TxtBxAddress.Text = contact.Address;
-                TxtBxPhoneNumber.Text = contact.PhoneNumber;
-                TxtBxWorkNumber.Text = contact.WorkNumber;
-            }
+        {  
         }
 
         private void EditContact()
@@ -130,7 +101,6 @@ namespace ContactAgenda
             string address = TxtBxAddress.Text;
             string phoneNumber = TxtBxPhoneNumber.Text;
             string workNumber = TxtBxWorkNumber.Text;
-            int idUser = (int)LoginRepository.Instance.IdLogedUser;
 
             if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(address) || !TxtBxPhoneNumber.MaskCompleted || !TxtBxWorkNumber.MaskCompleted)
             {
@@ -138,20 +108,7 @@ namespace ContactAgenda
             }
             else
             {
-                Contact updatedContact = new Contact()
-                {
-                    Id = (int)LoginRepository.Instance.IdSelectedContact,
-                    Name = name,
-                    LastName = lastName,
-                    Address = address,
-                    PhoneNumber = phoneNumber,
-                    WorkNumber = workNumber,
-                    IdUser = idUser
-                };
-
-                bool result = _contactService.Edit(updatedContact);
-
-                if (result)
+                if (true)
                 {
                     DialogResult response = MessageBox.Show("Contact edited successfully.", "Notification!", MessageBoxButtons.OK);
 
@@ -169,7 +126,6 @@ namespace ContactAgenda
 
         private void CloseForm()
         {
-            LoginRepository.Instance.IdSelectedContact = null;
             this.Close();
         }
 

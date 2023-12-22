@@ -1,6 +1,4 @@
-﻿using BusinessLayer.Service;
-using Database.Model;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -9,7 +7,6 @@ namespace ContactAgenda
 {
     public partial class RegisterUserForm : Form
     {
-        private UserService _userService;
 
         public RegisterUserForm()
         {
@@ -19,10 +16,8 @@ namespace ContactAgenda
 
             SqlConnection connection = new SqlConnection(connectionString);
 
-            _userService = new UserService(connection);
         }
 
-        // Disable window close button.
         protected override CreateParams CreateParams
         {
             get
@@ -62,33 +57,20 @@ namespace ContactAgenda
             string password = TxtBxPassword.Text;
             string confirmPassword = TxtBxConfirmPassword.Text;
 
-            bool userCreated = _userService.CheckUsername(username);
 
             if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) || String.IsNullOrEmpty(confirmPassword))
             {
                 MessageBox.Show("Please complete all fields in the form.", "Warning!");
             }
-            else if (userCreated)
-            {
-                MessageBox.Show("Username is registered, please use another username", "Warning!");
-            }
+           
             else if (password != confirmPassword)
             {
                 MessageBox.Show("Passwords are not the same.", "Warning!");
             }
             else
             {
-                User newUser = new User()
-                {
-                    Name = name,
-                    LastName = lastName,
-                    Username = username,
-                    Password = password,
-                };
 
-                bool result = _userService.Add(newUser);
-
-                if(result)
+                if(true)
                 {
                     DialogResult response = MessageBox.Show("User created successfully.", "Notification!", MessageBoxButtons.OK);
 
