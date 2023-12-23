@@ -96,6 +96,7 @@ namespace ContactAgenda
                     command.Parameters.AddWithValue("@Password", password);
 
                     int result = (int)command.ExecuteScalar();
+
                     using(SqlDataReader reader=command.ExecuteReader())
                     {
                         userID = reader.GetString(0);
