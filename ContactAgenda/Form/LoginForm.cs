@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace ContactAgenda
@@ -7,13 +8,12 @@ namespace ContactAgenda
     public partial class LoginForm : Form
     {
         public static LoginForm Instance { get; } = new LoginForm();
-
-        //private UserService _userService;
+        private readonly ErrorProvider errorProvider = new ErrorProvider();
 
         public LoginForm()
         {
             InitializeComponent();
-
+            errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
         }
 
@@ -45,29 +45,61 @@ namespace ContactAgenda
             string username = TxtBxUsername.Text;
             string password = TxtBxPassword.Text;
 
-
-            if(username == "nihad" && password == "12345678")
+            errorProvider.Clear();
+            if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
+                    if (String.IsNullOrEmpty(username))
+                    {
+                        errorProvider.SetError(TxtBxUsername, "Username is required");
+                    }
 
+                    if (String.IsNullOrEmpty(password))
+                    {
+                        errorProvider.SetError(TxtBxPassword, "Password is required");
+                    }
 
-                ContactsForm newContactsForm = new ContactsForm();
-                newContactsForm.Show();
-                this.Hide();
-
-                TxtBxUsername.Clear();
-                TxtBxPassword.Clear();
-
-            }
-            else if(String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Please complete all fields to login.", "Warning!");
+                   
+         
             }
             else
             {
-                MessageBox.Show("Username or password are incorrect.", "Warning!");
+                if (ValidateUserCredentials(username, password))
+                {
+                    ContactsForm newContactsForm = new ContactsForm();
+                    newContactsForm.Show();
+                    this.Hide();
+
+                    TxtBxUsername.Clear();
+                    TxtBxPassword.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Username or password are incorrect.", "Warning!");
+                }
             }
         }
 
+
+        private bool ValidateUserCredentials(string username, string password)
+        {
+
+            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    int result = (int)command.ExecuteScalar();
+
+                    return result > 0;
+                }
+            }
+        }
         #endregion
     }
 }

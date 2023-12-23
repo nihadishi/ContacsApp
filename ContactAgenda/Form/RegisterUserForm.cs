@@ -7,14 +7,12 @@ namespace ContactAgenda
 {
     public partial class RegisterUserForm : Form
     {
-
+        private readonly ErrorProvider errorProvider = new ErrorProvider();
         public RegisterUserForm()
         {
             InitializeComponent();
+            InitializeErrorProvider();
 
-            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
-
-            SqlConnection connection = new SqlConnection(connectionString);
 
         }
 
@@ -48,8 +46,64 @@ namespace ContactAgenda
         #endregion
 
         #region Methods
+        private void InitializeErrorProvider()
+        {
+            errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorProvider.ContainerControl = this;
+        }
 
         private void RegisterNewUser()
+        {
+
+            if (CheckUserCredentials() == true)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("INSERT INTO Users(Name,LastName,Username,Password) VALUES(@name,@lastname,@username,@password)", connection))
+                    {
+                        command.Parameters.AddWithValue("@name", TxtBxName.Text);
+                        command.Parameters.AddWithValue("@lastname", TxtBxLastname.Text);
+                        command.Parameters.AddWithValue("@username", TxtBxUsername.Text);
+                        command.Parameters.AddWithValue("@password", TxtBxPassword.Text);
+
+                        try
+                        {
+                            int rowsAffected = command.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                DialogResult response = MessageBox.Show("User created successfully.", "Notification!", MessageBoxButtons.OK);
+
+                                if (response == DialogResult.OK)
+                                {
+                                    CloseForm();
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error saving text: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Enter all of required informations");
+            }
+        }
+
+
+
+        private void CloseForm()
+        {
+            this.Close();
+        }
+
+        private bool CheckUserCredentials()
         {
             string name = TxtBxName.Text;
             string lastName = TxtBxLastname.Text;
@@ -57,38 +111,9 @@ namespace ContactAgenda
             string password = TxtBxPassword.Text;
             string confirmPassword = TxtBxConfirmPassword.Text;
 
+            if (name != null && lastName != null && username != null && password != null && confirmPassword != null && confirmPassword == password) return true;
+            return false;
 
-            if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password) || String.IsNullOrEmpty(confirmPassword))
-            {
-                MessageBox.Show("Please complete all fields in the form.", "Warning!");
-            }
-           
-            else if (password != confirmPassword)
-            {
-                MessageBox.Show("Passwords are not the same.", "Warning!");
-            }
-            else
-            {
-
-                if(true)
-                {
-                    DialogResult response = MessageBox.Show("User created successfully.", "Notification!", MessageBoxButtons.OK);
-
-                    if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("There was a problem creating the user, try again later.", "Error!");
-                }
-            }
-        }
-
-        private void CloseForm()
-        {
-            this.Close();
         }
 
         #endregion
