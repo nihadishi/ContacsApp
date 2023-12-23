@@ -80,6 +80,7 @@ namespace ContactAgenda
                 connection.Open();
                 using(SqlCommand command=new SqlCommand("SELECT *FROM Contacts WHERE USER_ID=@userid",connection))
                 {
+                    command.Parameters.AddWithValue("@user_id", LoginForm.userID);
                     using(SqlDataReader reader=command.ExecuteReader())
                     {
                         try

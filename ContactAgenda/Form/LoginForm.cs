@@ -7,6 +7,7 @@ namespace ContactAgenda
 {
     public partial class LoginForm : Form
     {
+        public static string userID;
         public static LoginForm Instance { get; } = new LoginForm();
         private readonly ErrorProvider errorProvider = new ErrorProvider();
 
@@ -95,6 +96,10 @@ namespace ContactAgenda
                     command.Parameters.AddWithValue("@Password", password);
 
                     int result = (int)command.ExecuteScalar();
+                    using(SqlDataReader reader=command.ExecuteReader())
+                    {
+                        userID = reader.GetString(0);
+                    }
 
                     return result > 0;
                 }
