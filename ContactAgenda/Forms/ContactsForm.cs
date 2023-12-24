@@ -132,9 +132,15 @@ namespace ContactAgenda
 
         private void EditContact()
         {
-            if (DgvContacts.SelectedRows.Count > 0)
+            if (DgvContacts.SelectedRows.Count == 1)
             {
-
+                Edit e = new Edit();
+                e.name = DgvContacts.SelectedRows[0].Cells[0].Value.ToString();
+                e.lastname = DgvContacts.SelectedRows[0].Cells[1].Value.ToString();
+                e.address = DgvContacts.SelectedRows[0].Cells[2].Value.ToString();
+                e.phonenumber = DgvContacts.SelectedRows[0].Cells[3].Value.ToString();
+                e.worknumber = DgvContacts.SelectedRows[0].Cells[4].Value.ToString();
+                e.Show();
             }
             else
             {
@@ -201,5 +207,10 @@ namespace ContactAgenda
         }
 
         #endregion
+
+        private void DgvContacts_DoubleClick(object sender, EventArgs e)
+        {
+            LoadContacts();
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace ContactAgenda
 
             //SqlConnection connection = new SqlConnection(connectionString);
 
-           // _contactService = new ContactService(connection);
+            // _contactService = new ContactService(connection);
         }
 
         // Disable window close button.
@@ -47,7 +47,7 @@ namespace ContactAgenda
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-                AddContact();
+            AddContact();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -79,9 +79,9 @@ namespace ContactAgenda
                     connection.Open();
                     using (SqlCommand command = new SqlCommand("INSERT INTO Contacts(Name,LastName,Address,PhoneNumber,WorkNumber,UserId) VALUES(@name,@lastname,@address,@phonenumber,@worknumber,@userid)", connection))
                     {
-                        command.Parameters.AddWithValue("@name",TxtBxName.Text);
-                        command.Parameters.AddWithValue("@lastname",TxtBxLastName.Text);
-                        command.Parameters.AddWithValue("@address",TxtBxAddress.Text);
+                        command.Parameters.AddWithValue("@name", TxtBxName.Text);
+                        command.Parameters.AddWithValue("@lastname", TxtBxLastName.Text);
+                        command.Parameters.AddWithValue("@address", TxtBxAddress.Text);
                         command.Parameters.AddWithValue("@phonenumber", TxtBxPhoneNumber.Text);
                         command.Parameters.AddWithValue("@worknumber", TxtBxWorkNumber.Text);
                         command.Parameters.AddWithValue("@userid", LoginForm.userID);
@@ -111,15 +111,25 @@ namespace ContactAgenda
         }
 
         private void LoadContactToEdit()
-        {  
+        {
         }
 
-       
+
         private void CloseForm()
         {
             this.Close();
         }
 
         #endregion
+
+        private void TlpMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TxtBxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
