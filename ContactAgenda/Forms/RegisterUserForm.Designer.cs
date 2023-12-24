@@ -29,200 +29,201 @@ namespace ContactAgenda
         /// </summary>
         private void InitializeComponent()
         {
-            this.TlpMain = new System.Windows.Forms.TableLayoutPanel();
-            this.LblName = new System.Windows.Forms.Label();
-            this.LblLastName = new System.Windows.Forms.Label();
-            this.LblUsername = new System.Windows.Forms.Label();
-            this.LblPassword = new System.Windows.Forms.Label();
-            this.LblConfirmPassword = new System.Windows.Forms.Label();
-            this.TxtBxName = new System.Windows.Forms.TextBox();
-            this.TxtBxLastname = new System.Windows.Forms.TextBox();
-            this.TxtBxUsername = new System.Windows.Forms.TextBox();
-            this.TxtBxPassword = new System.Windows.Forms.TextBox();
-            this.TxtBxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.BtnRegister = new System.Windows.Forms.Button();
-            this.BtnCancel = new System.Windows.Forms.Button();
-            this.TlpMain.SuspendLayout();
-            this.SuspendLayout();
+            TlpMain = new System.Windows.Forms.TableLayoutPanel();
+            LblName = new System.Windows.Forms.Label();
+            LblLastName = new System.Windows.Forms.Label();
+            LblUsername = new System.Windows.Forms.Label();
+            LblPassword = new System.Windows.Forms.Label();
+            LblConfirmPassword = new System.Windows.Forms.Label();
+            TxtBxName = new System.Windows.Forms.TextBox();
+            TxtBxLastname = new System.Windows.Forms.TextBox();
+            TxtBxUsername = new System.Windows.Forms.TextBox();
+            TxtBxPassword = new System.Windows.Forms.TextBox();
+            TxtBxConfirmPassword = new System.Windows.Forms.TextBox();
+            BtnRegister = new System.Windows.Forms.Button();
+            BtnCancel = new System.Windows.Forms.Button();
+            TlpMain.SuspendLayout();
+            SuspendLayout();
             // 
             // TlpMain
             // 
-            this.TlpMain.ColumnCount = 4;
-            this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TlpMain.Controls.Add(this.LblName, 1, 1);
-            this.TlpMain.Controls.Add(this.LblLastName, 1, 2);
-            this.TlpMain.Controls.Add(this.LblUsername, 1, 3);
-            this.TlpMain.Controls.Add(this.LblPassword, 1, 4);
-            this.TlpMain.Controls.Add(this.LblConfirmPassword, 1, 5);
-            this.TlpMain.Controls.Add(this.TxtBxName, 2, 1);
-            this.TlpMain.Controls.Add(this.TxtBxLastname, 2, 2);
-            this.TlpMain.Controls.Add(this.TxtBxUsername, 2, 3);
-            this.TlpMain.Controls.Add(this.TxtBxPassword, 2, 4);
-            this.TlpMain.Controls.Add(this.TxtBxConfirmPassword, 2, 5);
-            this.TlpMain.Controls.Add(this.BtnRegister, 1, 6);
-            this.TlpMain.Controls.Add(this.BtnCancel, 2, 6);
-            this.TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpMain.Location = new System.Drawing.Point(0, 0);
-            this.TlpMain.Name = "TlpMain";
-            this.TlpMain.RowCount = 8;
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TlpMain.Size = new System.Drawing.Size(608, 450);
-            this.TlpMain.TabIndex = 0;
+            TlpMain.ColumnCount = 4;
+            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0986843F));
+            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.2368431F));
+            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            TlpMain.Controls.Add(LblName, 1, 1);
+            TlpMain.Controls.Add(LblLastName, 1, 2);
+            TlpMain.Controls.Add(LblUsername, 1, 3);
+            TlpMain.Controls.Add(LblPassword, 1, 4);
+            TlpMain.Controls.Add(LblConfirmPassword, 1, 5);
+            TlpMain.Controls.Add(TxtBxName, 2, 1);
+            TlpMain.Controls.Add(TxtBxLastname, 2, 2);
+            TlpMain.Controls.Add(TxtBxUsername, 2, 3);
+            TlpMain.Controls.Add(TxtBxPassword, 2, 4);
+            TlpMain.Controls.Add(TxtBxConfirmPassword, 2, 5);
+            TlpMain.Controls.Add(BtnRegister, 1, 6);
+            TlpMain.Controls.Add(BtnCancel, 2, 6);
+            TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            TlpMain.Location = new System.Drawing.Point(0, 0);
+            TlpMain.Name = "TlpMain";
+            TlpMain.RowCount = 8;
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            TlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            TlpMain.Size = new System.Drawing.Size(608, 450);
+            TlpMain.TabIndex = 0;
             // 
             // LblName
             // 
-            this.LblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblName.AutoSize = true;
-            this.LblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblName.Location = new System.Drawing.Point(248, 56);
-            this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(53, 21);
-            this.LblName.TabIndex = 0;
-            this.LblName.Text = "Name";
+            LblName.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            LblName.AutoSize = true;
+            LblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LblName.Location = new System.Drawing.Point(203, 56);
+            LblName.Name = "LblName";
+            LblName.Size = new System.Drawing.Size(53, 21);
+            LblName.TabIndex = 0;
+            LblName.Text = "Name";
             // 
             // LblLastName
             // 
-            this.LblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblLastName.AutoSize = true;
-            this.LblLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblLastName.Location = new System.Drawing.Point(218, 112);
-            this.LblLastName.Name = "LblLastName";
-            this.LblLastName.Size = new System.Drawing.Size(83, 21);
-            this.LblLastName.TabIndex = 1;
-            this.LblLastName.Text = "Last name";
+            LblLastName.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            LblLastName.AutoSize = true;
+            LblLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LblLastName.Location = new System.Drawing.Point(173, 112);
+            LblLastName.Name = "LblLastName";
+            LblLastName.Size = new System.Drawing.Size(83, 21);
+            LblLastName.TabIndex = 1;
+            LblLastName.Text = "Last name";
             // 
             // LblUsername
             // 
-            this.LblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblUsername.AutoSize = true;
-            this.LblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblUsername.Location = new System.Drawing.Point(218, 168);
-            this.LblUsername.Name = "LblUsername";
-            this.LblUsername.Size = new System.Drawing.Size(83, 21);
-            this.LblUsername.TabIndex = 2;
-            this.LblUsername.Text = "Username";
+            LblUsername.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            LblUsername.AutoSize = true;
+            LblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LblUsername.Location = new System.Drawing.Point(173, 168);
+            LblUsername.Name = "LblUsername";
+            LblUsername.Size = new System.Drawing.Size(83, 21);
+            LblUsername.TabIndex = 2;
+            LblUsername.Text = "Username";
             // 
             // LblPassword
             // 
-            this.LblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblPassword.AutoSize = true;
-            this.LblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblPassword.Location = new System.Drawing.Point(222, 224);
-            this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(79, 21);
-            this.LblPassword.TabIndex = 3;
-            this.LblPassword.Text = "Password";
+            LblPassword.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            LblPassword.AutoSize = true;
+            LblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LblPassword.Location = new System.Drawing.Point(177, 224);
+            LblPassword.Name = "LblPassword";
+            LblPassword.Size = new System.Drawing.Size(79, 21);
+            LblPassword.TabIndex = 3;
+            LblPassword.Text = "Password";
             // 
             // LblConfirmPassword
             // 
-            this.LblConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblConfirmPassword.AutoSize = true;
-            this.LblConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblConfirmPassword.Location = new System.Drawing.Point(158, 280);
-            this.LblConfirmPassword.Name = "LblConfirmPassword";
-            this.LblConfirmPassword.Size = new System.Drawing.Size(143, 21);
-            this.LblConfirmPassword.TabIndex = 4;
-            this.LblConfirmPassword.Text = "Confirm password";
+            LblConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            LblConfirmPassword.AutoSize = true;
+            LblConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            LblConfirmPassword.Location = new System.Drawing.Point(113, 280);
+            LblConfirmPassword.Name = "LblConfirmPassword";
+            LblConfirmPassword.Size = new System.Drawing.Size(143, 21);
+            LblConfirmPassword.TabIndex = 4;
+            LblConfirmPassword.Text = "Confirm password";
             // 
             // TxtBxName
             // 
-            this.TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxName.Location = new System.Drawing.Point(307, 59);
-            this.TxtBxName.Name = "TxtBxName";
-            this.TxtBxName.Size = new System.Drawing.Size(146, 29);
-            this.TxtBxName.TabIndex = 5;
+            TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
+            TxtBxName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TxtBxName.Location = new System.Drawing.Point(262, 59);
+            TxtBxName.Name = "TxtBxName";
+            TxtBxName.Size = new System.Drawing.Size(190, 29);
+            TxtBxName.TabIndex = 5;
             // 
             // TxtBxLastname
             // 
-            this.TxtBxLastname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxLastname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxLastname.Location = new System.Drawing.Point(307, 115);
-            this.TxtBxLastname.Name = "TxtBxLastname";
-            this.TxtBxLastname.Size = new System.Drawing.Size(146, 29);
-            this.TxtBxLastname.TabIndex = 6;
+            TxtBxLastname.Dock = System.Windows.Forms.DockStyle.Top;
+            TxtBxLastname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TxtBxLastname.Location = new System.Drawing.Point(262, 115);
+            TxtBxLastname.Name = "TxtBxLastname";
+            TxtBxLastname.Size = new System.Drawing.Size(190, 29);
+            TxtBxLastname.TabIndex = 6;
             // 
             // TxtBxUsername
             // 
-            this.TxtBxUsername.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxUsername.Location = new System.Drawing.Point(307, 171);
-            this.TxtBxUsername.Name = "TxtBxUsername";
-            this.TxtBxUsername.Size = new System.Drawing.Size(146, 29);
-            this.TxtBxUsername.TabIndex = 7;
+            TxtBxUsername.Dock = System.Windows.Forms.DockStyle.Top;
+            TxtBxUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TxtBxUsername.Location = new System.Drawing.Point(262, 171);
+            TxtBxUsername.Name = "TxtBxUsername";
+            TxtBxUsername.Size = new System.Drawing.Size(190, 29);
+            TxtBxUsername.TabIndex = 7;
             // 
             // TxtBxPassword
             // 
-            this.TxtBxPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxPassword.Location = new System.Drawing.Point(307, 227);
-            this.TxtBxPassword.Name = "TxtBxPassword";
-            this.TxtBxPassword.PasswordChar = '*';
-            this.TxtBxPassword.Size = new System.Drawing.Size(146, 29);
-            this.TxtBxPassword.TabIndex = 8;
+            TxtBxPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            TxtBxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TxtBxPassword.Location = new System.Drawing.Point(262, 227);
+            TxtBxPassword.Name = "TxtBxPassword";
+            TxtBxPassword.PasswordChar = '*';
+            TxtBxPassword.Size = new System.Drawing.Size(190, 29);
+            TxtBxPassword.TabIndex = 8;
             // 
             // TxtBxConfirmPassword
             // 
-            this.TxtBxConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxConfirmPassword.Location = new System.Drawing.Point(307, 283);
-            this.TxtBxConfirmPassword.Name = "TxtBxConfirmPassword";
-            this.TxtBxConfirmPassword.PasswordChar = '*';
-            this.TxtBxConfirmPassword.Size = new System.Drawing.Size(146, 29);
-            this.TxtBxConfirmPassword.TabIndex = 9;
+            TxtBxConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            TxtBxConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TxtBxConfirmPassword.Location = new System.Drawing.Point(262, 283);
+            TxtBxConfirmPassword.Name = "TxtBxConfirmPassword";
+            TxtBxConfirmPassword.PasswordChar = '*';
+            TxtBxConfirmPassword.Size = new System.Drawing.Size(190, 29);
+            TxtBxConfirmPassword.TabIndex = 9;
             // 
             // BtnRegister
             // 
-            this.BtnRegister.BackColor = System.Drawing.Color.SandyBrown;
-            this.BtnRegister.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnRegister.Location = new System.Drawing.Point(155, 339);
-            this.BtnRegister.Name = "BtnRegister";
-            this.BtnRegister.Size = new System.Drawing.Size(146, 32);
-            this.BtnRegister.TabIndex = 10;
-            this.BtnRegister.Text = "Register";
-            this.BtnRegister.UseVisualStyleBackColor = false;
-            this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
+            BtnRegister.BackColor = System.Drawing.Color.Indigo;
+            BtnRegister.Dock = System.Windows.Forms.DockStyle.Top;
+            BtnRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            BtnRegister.ForeColor = System.Drawing.SystemColors.HighlightText;
+            BtnRegister.Location = new System.Drawing.Point(79, 339);
+            BtnRegister.Name = "BtnRegister";
+            BtnRegister.Size = new System.Drawing.Size(177, 32);
+            BtnRegister.TabIndex = 10;
+            BtnRegister.Text = "Register";
+            BtnRegister.UseVisualStyleBackColor = false;
+            BtnRegister.Click += BtnRegister_Click;
             // 
             // BtnCancel
             // 
-            this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancel.Location = new System.Drawing.Point(307, 339);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(146, 32);
-            this.BtnCancel.TabIndex = 11;
-            this.BtnCancel.Text = "Cancel";
-            this.BtnCancel.UseVisualStyleBackColor = false;
-            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            BtnCancel.BackColor = System.Drawing.Color.IndianRed;
+            BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            BtnCancel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            BtnCancel.Location = new System.Drawing.Point(262, 339);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new System.Drawing.Size(190, 32);
+            BtnCancel.TabIndex = 11;
+            BtnCancel.Text = "Cancel";
+            BtnCancel.UseVisualStyleBackColor = false;
+            BtnCancel.Click += BtnCancel_Click;
             // 
             // RegisterUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(608, 450);
-            this.Controls.Add(this.TlpMain);
-            this.Name = "RegisterUserForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register New User";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterUserForm_FormClosed);
-            this.TlpMain.ResumeLayout(false);
-            this.TlpMain.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.MediumSeaGreen;
+            ClientSize = new System.Drawing.Size(608, 450);
+            Controls.Add(TlpMain);
+            Name = "RegisterUserForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Register New User";
+            FormClosed += RegisterUserForm_FormClosed;
+            TlpMain.ResumeLayout(false);
+            TlpMain.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

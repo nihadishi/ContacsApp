@@ -49,7 +49,7 @@
             LblPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             LblPhoneNumber.AutoSize = true;
             LblPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            LblPhoneNumber.Location = new System.Drawing.Point(280, 224);
+            LblPhoneNumber.Location = new System.Drawing.Point(127, 224);
             LblPhoneNumber.Name = "LblPhoneNumber";
             LblPhoneNumber.Size = new System.Drawing.Size(117, 21);
             LblPhoneNumber.TabIndex = 3;
@@ -60,9 +60,10 @@
             BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
             BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            BtnCancel.Location = new System.Drawing.Point(403, 339);
+            BtnCancel.Location = new System.Drawing.Point(250, 339);
+            BtnCancel.MaximumSize = new System.Drawing.Size(120, 300);
             BtnCancel.Name = "BtnCancel";
-            BtnCancel.Size = new System.Drawing.Size(274, 33);
+            BtnCancel.Size = new System.Drawing.Size(120, 33);
             BtnCancel.TabIndex = 6;
             BtnCancel.Text = "Cancel";
             BtnCancel.UseVisualStyleBackColor = false;
@@ -72,18 +73,19 @@
             // 
             TxtBxWorkNumber.Dock = System.Windows.Forms.DockStyle.Top;
             TxtBxWorkNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            TxtBxWorkNumber.Location = new System.Drawing.Point(403, 283);
+            TxtBxWorkNumber.Location = new System.Drawing.Point(250, 283);
             TxtBxWorkNumber.Mask = "(999) 000-0000";
             TxtBxWorkNumber.Name = "TxtBxWorkNumber";
-            TxtBxWorkNumber.Size = new System.Drawing.Size(274, 29);
+            TxtBxWorkNumber.Size = new System.Drawing.Size(427, 29);
             TxtBxWorkNumber.TabIndex = 11;
             // 
             // TlpMain
             // 
+            TlpMain.BackColor = System.Drawing.SystemColors.MenuHighlight;
             TlpMain.ColumnCount = 4;
             TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.875F));
+            TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.125F));
             TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             TlpMain.Controls.Add(LblName, 1, 1);
             TlpMain.Controls.Add(LblLastName, 1, 2);
@@ -117,7 +119,7 @@
             LblName.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             LblName.AutoSize = true;
             LblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            LblName.Location = new System.Drawing.Point(344, 56);
+            LblName.Location = new System.Drawing.Point(191, 56);
             LblName.Name = "LblName";
             LblName.Size = new System.Drawing.Size(53, 21);
             LblName.TabIndex = 0;
@@ -128,7 +130,7 @@
             LblLastName.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             LblLastName.AutoSize = true;
             LblLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            LblLastName.Location = new System.Drawing.Point(314, 112);
+            LblLastName.Location = new System.Drawing.Point(161, 112);
             LblLastName.Name = "LblLastName";
             LblLastName.Size = new System.Drawing.Size(83, 21);
             LblLastName.TabIndex = 1;
@@ -139,7 +141,7 @@
             LblAddress.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             LblAddress.AutoSize = true;
             LblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            LblAddress.Location = new System.Drawing.Point(327, 168);
+            LblAddress.Location = new System.Drawing.Point(174, 168);
             LblAddress.Name = "LblAddress";
             LblAddress.Size = new System.Drawing.Size(70, 21);
             LblAddress.TabIndex = 2;
@@ -150,7 +152,7 @@
             LblWorkNumber.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             LblWorkNumber.AutoSize = true;
             LblWorkNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            LblWorkNumber.Location = new System.Drawing.Point(287, 280);
+            LblWorkNumber.Location = new System.Drawing.Point(134, 280);
             LblWorkNumber.Name = "LblWorkNumber";
             LblWorkNumber.Size = new System.Drawing.Size(110, 21);
             LblWorkNumber.TabIndex = 4;
@@ -163,7 +165,7 @@
             BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             BtnSave.Location = new System.Drawing.Point(123, 339);
             BtnSave.Name = "BtnSave";
-            BtnSave.Size = new System.Drawing.Size(274, 33);
+            BtnSave.Size = new System.Drawing.Size(121, 33);
             BtnSave.TabIndex = 5;
             BtnSave.Text = "Save";
             BtnSave.UseVisualStyleBackColor = false;
@@ -173,37 +175,37 @@
             // 
             TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
             TxtBxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            TxtBxName.Location = new System.Drawing.Point(403, 59);
+            TxtBxName.Location = new System.Drawing.Point(250, 59);
             TxtBxName.Name = "TxtBxName";
-            TxtBxName.Size = new System.Drawing.Size(274, 29);
+            TxtBxName.Size = new System.Drawing.Size(427, 29);
             TxtBxName.TabIndex = 7;
             // 
             // TxtBxLastName
             // 
             TxtBxLastName.Dock = System.Windows.Forms.DockStyle.Top;
             TxtBxLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            TxtBxLastName.Location = new System.Drawing.Point(403, 115);
+            TxtBxLastName.Location = new System.Drawing.Point(250, 115);
             TxtBxLastName.Name = "TxtBxLastName";
-            TxtBxLastName.Size = new System.Drawing.Size(274, 29);
+            TxtBxLastName.Size = new System.Drawing.Size(427, 29);
             TxtBxLastName.TabIndex = 8;
             // 
             // TxtBxAddress
             // 
             TxtBxAddress.Dock = System.Windows.Forms.DockStyle.Top;
             TxtBxAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            TxtBxAddress.Location = new System.Drawing.Point(403, 171);
+            TxtBxAddress.Location = new System.Drawing.Point(250, 171);
             TxtBxAddress.Name = "TxtBxAddress";
-            TxtBxAddress.Size = new System.Drawing.Size(274, 29);
+            TxtBxAddress.Size = new System.Drawing.Size(427, 29);
             TxtBxAddress.TabIndex = 9;
             // 
             // TxtBxPhoneNumber
             // 
             TxtBxPhoneNumber.Dock = System.Windows.Forms.DockStyle.Top;
             TxtBxPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            TxtBxPhoneNumber.Location = new System.Drawing.Point(403, 227);
+            TxtBxPhoneNumber.Location = new System.Drawing.Point(250, 227);
             TxtBxPhoneNumber.Mask = "(999) 000-0000";
             TxtBxPhoneNumber.Name = "TxtBxPhoneNumber";
-            TxtBxPhoneNumber.Size = new System.Drawing.Size(274, 29);
+            TxtBxPhoneNumber.Size = new System.Drawing.Size(427, 29);
             TxtBxPhoneNumber.TabIndex = 10;
             // 
             // Edit
