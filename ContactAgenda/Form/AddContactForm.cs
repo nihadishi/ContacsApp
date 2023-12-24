@@ -66,7 +66,6 @@ namespace ContactAgenda
             string address = TxtBxAddress.Text;
             string phoneNumber = TxtBxPhoneNumber.Text;
             string workNumber = TxtBxWorkNumber.Text;
-            int idUser = 1;
 
             if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(address) || !TxtBxPhoneNumber.MaskCompleted || !TxtBxWorkNumber.MaskCompleted)
             {
@@ -74,18 +73,39 @@ namespace ContactAgenda
             }
             else
             {
-                if (true)
+                string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    DialogResult response = MessageBox.Show("Contact created successfully.", "Notification!", MessageBoxButtons.OK);
-
-                    if (response == DialogResult.OK)
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("INSERT INTO Contacts(Name,LastName,Address,PhoneNumber,WorkNumber,UserId) VALUES(@name,@lastname,@address,@phonenumber,@worknumber,@userid)", connection))
                     {
-                        CloseForm();
+                        command.Parameters.AddWithValue("@name",TxtBxName.Text);
+                        command.Parameters.AddWithValue("@lastname",TxtBxLastName.Text);
+                        command.Parameters.AddWithValue("@address",TxtBxAddress.Text);
+                        command.Parameters.AddWithValue("@phonenumber", TxtBxPhoneNumber.Text);
+                        command.Parameters.AddWithValue("@worknumber", TxtBxWorkNumber.Text);
+                        command.Parameters.AddWithValue("@userid", LoginForm.userID);
+
+
+                        try
+                        {
+                            int rowsAffected = command.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                DialogResult response = MessageBox.Show("User created successfully.", "Notification!", MessageBoxButtons.OK);
+
+                                if (response == DialogResult.OK)
+                                {
+                                    CloseForm();
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error saving text: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                     }
-                }
-                else
-                {
-                    MessageBox.Show("There was a problem creating the contact, try again later.", "Error!");
                 }
             }
         }
@@ -94,36 +114,7 @@ namespace ContactAgenda
         {  
         }
 
-        private void EditContact()
-        {
-            string name = TxtBxName.Text;
-            string lastName = TxtBxLastName.Text;
-            string address = TxtBxAddress.Text;
-            string phoneNumber = TxtBxPhoneNumber.Text;
-            string workNumber = TxtBxWorkNumber.Text;
-
-            if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(address) || !TxtBxPhoneNumber.MaskCompleted || !TxtBxWorkNumber.MaskCompleted)
-            {
-                MessageBox.Show("Please complete all fields in the form.", "Warning!");
-            }
-            else
-            {
-                if (true)
-                {
-                    DialogResult response = MessageBox.Show("Contact edited successfully.", "Notification!", MessageBoxButtons.OK);
-
-                    if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("There was a problem editing the contact, try again later.", "Error!");
-                }
-            }
-        }
-
+       
         private void CloseForm()
         {
             this.Close();

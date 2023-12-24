@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -83,27 +84,36 @@ namespace ContactAgenda
 
         private bool ValidateUserCredentials(string username, string password)
         {
-
-            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-
-                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
+                    connection.Open();
 
-                    int result = (int)command.ExecuteScalar();
-
-                    using(SqlDataReader reader=command.ExecuteReader())
+                    string query = "SELECT Id FROM Users WHERE Username = @Username AND Password = @Password";
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        userID = reader.GetString(0);
-                    }
+                        command.Parameters.Add("@Username", SqlDbType.NVarChar, 30).Value = username;  // Parameterize with type
+                        command.Parameters.Add("@Password", SqlDbType.NVarChar, 20).Value = password;  // Parameterize with type
 
-                    return result > 0;
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                userID = reader["Id"].ToString();
+                                return true;  // Indicate successful authentication
+                            }
+                        }
+                    }
                 }
+                return false;  // No matching user found
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions gracefully, e.g., log the error
+                Console.WriteLine("Error: " + ex.Message);
+                return false;
             }
         }
         #endregion
